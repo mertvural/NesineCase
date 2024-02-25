@@ -130,23 +130,23 @@ function Bets() {
                             item.OCG[1].MBS
                         }
                     </div>
-                    <div className={"cell " + (isInBasket(item.C, item.OCG[1].OC[0].ID) ? "active" : "")} onClick={(e) => handleRate(e.target, item.OCG[1].OC[0].ID, item)}>
+                    <div className={`cell ${isInBasket(item.C, item.OCG[1].OC[0].ID) ? "active" : ""}`} onClick={(e) => handleRate(e.target, item.OCG[1].OC[0].ID, item)}>
                         {
                             item.OCG[1].OC[0].O
                         }
                     </div>
-                    <div className={"cell " + (isInBasket(item.C, item.OCG[1].OC[1].ID) ? "active" : "")} onClick={(e) => handleRate(e.target, item.OCG[1].OC[1].ID, item)}>
+                    <div className={`cell ${isInBasket(item.C, item.OCG[1].OC[1].ID) ? "active" : ""}`} onClick={(e) => handleRate(e.target, item.OCG[1].OC[1].ID, item)}>
                         {
                             item.OCG[1].OC[1].O
                         }
                     </div>
                     <div className="cell"></div>
-                    <div className={"cell " + (isInBasket(item.C, item.OCG[5].OC[25].ID) ? "active" : "")} onClick={(e) => handleRate(e.target, item.OCG[5].OC[25].ID, item)}>
+                    <div className={`cell ${isInBasket(item.C, item.OCG[5].OC[25].ID) ? "active" : ""}`} onClick={(e) => handleRate(e.target, item.OCG[5].OC[25].ID, item)}>
                         {
                             item.OCG[5].OC[25].O
                         }
                     </div>
-                    <div className={"cell " + (isInBasket(item.C, item.OCG[5].OC[26].ID) ? "active" : "")} onClick={(e) => handleRate(e.target, item.OCG[5].OC[26].ID, item)}>
+                    <div className={`cell ${isInBasket(item.C, item.OCG[5].OC[26].ID) ? "active" : ""}`} onClick={(e) => handleRate(e.target, item.OCG[5].OC[26].ID, item)}>
                         {
                             item.OCG[5].OC[26].O
                         }
@@ -156,17 +156,17 @@ function Bets() {
                     <div className="cell"></div>
                     <div className="cell"></div>
                     <div className="cell"></div>
-                    <div className={"cell " + (isInBasket(item.C, item.OCG[2].OC[3].ID) ? "active" : "")} onClick={(e) => handleRate(e.target, item.OCG[2].OC[3].ID, item)}>
+                    <div className={`cell ${isInBasket(item.C, item.OCG[2].OC[3].ID) ? "active" : ""}`} onClick={(e) => handleRate(e.target, item.OCG[2].OC[3].ID, item)}>
                         {
                             item.OCG[2].OC[3].O
                         }
                     </div>
-                    <div className={"cell " + (isInBasket(item.C, item.OCG[2].OC[4].ID) ? "active" : "")} onClick={(e) => handleRate(e.target, item.OCG[2].OC[4].ID, item)}>
+                    <div className={`cell ${isInBasket(item.C, item.OCG[2].OC[4].ID) ? "active" : ""}`} onClick={(e) => handleRate(e.target, item.OCG[2].OC[4].ID, item)}>
                         {
                             item.OCG[2].OC[4].O
                         }
                     </div>
-                    <div className={"cell " + (isInBasket(item.C, item.OCG[2].OC[5].ID) ? "active" : "")} onClick={(e) => handleRate(e.target, item.OCG[2].OC[5].ID, item)}>
+                    <div className={`cell ${isInBasket(item.C, item.OCG[2].OC[5].ID) ? "active" : ""}`} onClick={(e) => handleRate(e.target, item.OCG[2].OC[5].ID, item)}>
                         {
                             item.OCG[2].OC[5].O
                         }

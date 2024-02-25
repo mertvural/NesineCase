@@ -3,11 +3,13 @@ import { useState } from "react";
 function Basket({ basketData }) {
     const [small, setSmall] = useState(false);
     let total = 1;
+    const basketClass = basketData.length > 0 ? "active" : "";
+    const smallClass = small ? "small" : "";
     const handleSmallSize = () => {
         setSmall(!small)
     }
     return (
-        <div className={`${basketData.length > 0 ? "basket active" : "basket"} ${small ? "small" : ""}`}>
+        <div className={`basket ${basketClass} ${smallClass}`}>
             <h2 onClick={handleSmallSize} className="basket__smallsize">
                 <span>
                     İDDAA KUPONUM
