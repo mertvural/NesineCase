@@ -70,9 +70,12 @@ ul {
   }
 
   .list {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 48px);
     overflow-y: auto;
     overflow-x: hidden;
+    @media (max-width:$mobile) {
+      height: calc(100vh - 150px);
+    }
 
     &__group {
 
