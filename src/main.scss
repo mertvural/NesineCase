@@ -77,6 +77,7 @@ ul {
     overflow-x: hidden;
     @media (max-width:$mobile) {
       height: calc(100vh - 150px);
+      height: calc(100svh - 48px);
     }
 
     &__group {
