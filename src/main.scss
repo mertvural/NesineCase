@@ -70,7 +70,7 @@ ul {
   }
 
   .list {
-    height: calc(100vh - 48px);
+    max-height: calc(100vh - 48px);
     overflow-y: auto;
     overflow-x: hidden;
 
