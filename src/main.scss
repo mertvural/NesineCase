@@ -1,4 +1,6 @@
 $mobile: 1024px;
+$secondaryColor:#fc0;
+$colorWhite:#fff;
 
 html,
 body {
@@ -57,7 +59,7 @@ ul {
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #204e57;
-    color: #fff;
+    color: $colorWhite;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -92,7 +94,7 @@ ul {
 
       &--category {
         background-color: #7d9fa4;
-        color: #fff;
+        color: $colorWhite;
 
         .cell {
           padding: 1px 5px;
@@ -105,7 +107,7 @@ ul {
           cursor: pointer;
 
           &:hover {
-            background-color: #fc0;
+            background-color: $secondaryColor;
 
             @media (max-width:$mobile) {
               background-color: transparent;
@@ -113,12 +115,12 @@ ul {
           }
 
           &.active {
-            background-color: #fc0;
+            background-color: $secondaryColor
           }
         }
 
         &:hover {
-          background-color: #fff;
+          background-color: $colorWhite;
         }
       }
     }
@@ -135,7 +137,7 @@ ul {
     margin: auto;
     bottom: 0;
     top: 0;
-    background: url(../public/images/loading-nesine-icon.gif) no-repeat center center #fff;
+    background: url(../public/images/loading-nesine-icon.gif) no-repeat center center $colorWhite;
   }
 
   &:after {
@@ -159,7 +161,7 @@ ul {
   right: 0;
   bottom: 0;
   width: 360px;
-  background: linear-gradient(180deg, #ddd, #fff);
+  background: linear-gradient(180deg, #ddd, $colorWhite);
   border: 2px solid #123035;
 
   ul {
@@ -186,7 +188,7 @@ ul {
     font-size: 15px;
     font-weight: 700;
     background-color: #204e57;
-    color: #fff;
+    color: $colorWhite;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -210,7 +212,7 @@ ul {
     font-size: 12px;
     text-align: center;
     color: #153238;
-    background-color: #fc0;
+    background-color: $secondaryColor;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
