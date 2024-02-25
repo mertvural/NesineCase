@@ -1,0 +1,256 @@
+$mobile: 1024px;
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 13px;
+  font-family: Tahoma, Verdana, sans-serif
+}
+
+h1,
+h2,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.table {
+  display: table;
+  width: 100%;
+  background: #ebf6e8;
+
+  .cell {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgba(25, 61, 68, .5);
+    flex: 1;
+    white-space: nowrap;
+    @media (max-width:$mobile) {
+      min-width: 70px;
+    }
+  }
+
+  .th {
+    padding: 15px 5px;
+  }
+
+  header {
+    height: 48px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #204e57;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+
+    .th:first-child {
+      width: 300px;
+      min-width: 300px;
+    }
+  }
+
+  .list {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &__group {
+
+      &--category,
+      &--category-item {
+        display: flex;
+
+        .cell:first-child {
+          width: 300px;
+          min-width: 300px;
+          text-align: left;
+        }
+      }
+
+      &--category {
+        background-color: #7d9fa4;
+        color: #fff;
+
+        .cell {
+          padding: 1px 5px;
+        }
+      }
+
+      &--category-item {
+        .cell {
+          padding: 8px 5px;
+          cursor: pointer;
+
+          &:hover,
+          &.active {
+            background-color: #fc0;
+          }
+        }
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.loading {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    background: url(../public/images/loading-nesine-icon.gif) no-repeat center center #fff;
+  }
+
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #00000073;
+    height: 100%;
+  }
+}
+
+.basket {
+  letter-spacing: -.2px;
+  box-shadow: 0px 0px 30px #00000052;
+  transform: translateY(100%);
+  transition: transform .4s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 360px;
+  background: linear-gradient(180deg, #ddd, #fff);
+  border: 2px solid #123035;
+
+  ul {
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-flow: row wrap;
+      gap: 10px;
+
+      +li {
+        margin-top: 10px;
+        border-top: 1px solid #9b9b9b;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #204e57;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 14px;
+    margin: 15px 0 0 0;
+  }
+
+  &__wrapper {
+    padding: 10px;
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  &__count {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: #153238;
+    background-color: #fc0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+  }
+
+  &__smallsize {
+    cursor: pointer;
+  }
+
+  &.small {
+    animation: bounce 2s cubic-bezier(0.64, 0.57, 0.67, 1.53) infinite;
+    width: auto;
+    border-radius: 50%;
+
+    h2 {
+      padding: 0;
+      font-size: 0;
+      background: transparent;
+
+      .basket__count {
+        margin: 0;
+      }
+    }
+
+    .basket__wrapper {
+      display: none;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: scale(1, 1) translateY(0);
+      }
+
+      10% {
+        transform: scale(1.1, .9) translateY(0);
+      }
+
+      30% {
+        transform: scale(.9, 1.1) translateY(-10px);
+      }
+
+      50% {
+        transform: scale(1, 1) translateY(0);
+      }
+
+      100% {
+        transform: scale(1, 1) translateY(0);
+      }
+    }
+    @media (max-width:$mobile) {
+      right: inherit;
+  }
+  }
+
+  @media (max-width:$mobile) {
+      position: absolute;
+      left: 0;
+  }
+
+}
