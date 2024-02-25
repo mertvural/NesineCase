@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import VirtualScroll from "react-dynamic-virtual-scroll";
 import Basket from "./Basket";
 
