@@ -245,9 +245,6 @@ function Bets() {
                 </header>
                 <main>
                     <VirtualScroll
-                        style={{
-                            height: window.innerHeight - 48
-                        }}
                         className="list"
                         minItemHeight={40}
                         totalLength={data.length}

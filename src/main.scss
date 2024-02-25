@@ -1,5 +1,12 @@
 $mobile: 1024px;
 
+html,
+body {
+  @media (max-width:$mobile) {
+    overflow-y: hidden;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -35,6 +42,7 @@ ul {
     border: 1px solid rgba(25, 61, 68, .5);
     flex: 1;
     white-space: nowrap;
+
     @media (max-width:$mobile) {
       min-width: 70px;
     }
@@ -62,6 +70,7 @@ ul {
   }
 
   .list {
+    height: calc(100vh - 48px);
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -92,7 +101,14 @@ ul {
           padding: 8px 5px;
           cursor: pointer;
 
-          &:hover,
+          &:hover {
+            background-color: #fc0;
+
+            @media (max-width:$mobile) {
+              background-color: transparent;
+            }
+          }
+
           &.active {
             background-color: #fc0;
           }
@@ -243,14 +259,5 @@ ul {
         transform: scale(1, 1) translateY(0);
       }
     }
-    @media (max-width:$mobile) {
-      right: inherit;
   }
-  }
-
-  @media (max-width:$mobile) {
-      position: absolute;
-      left: 0;
-  }
-
 }
