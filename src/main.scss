@@ -1,6 +1,7 @@
 $mobile: 1024px;
 $secondaryColor:#fc0;
 $colorWhite:#fff;
+$loadingGif:"../public/images/loading-nesine-icon.gif";
 
 html,
 body {
@@ -138,7 +139,7 @@ ul {
     margin: auto;
     bottom: 0;
     top: 0;
-    background: url(../public/images/loading-nesine-icon.gif) no-repeat center center $colorWhite;
+    background: url($loadingGif) no-repeat center center $colorWhite;
   }
 
   &:after {
