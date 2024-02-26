@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import VirtualScroll from "react-dynamic-virtual-scroll";
 import Basket from "./Basket";
 
@@ -46,9 +46,11 @@ function Bets() {
         }
     }, [updateBasketData, setBasketData]);
 
-    const isInBasket = (itemCode, id) => {
-        return updateBasketData.some(el => el.code === itemCode && el.id === id);
-    };
+    const isInBasket = useMemo(() => {
+        return (itemCode, id) => {
+            return updateBasketData.some(el => el.code === itemCode && el.id === id);
+        };
+    }, [updateBasketData]);
 
     const renderItem = useCallback((rowIndex) => {
         const item = data[rowIndex];
