@@ -22,7 +22,7 @@ function Bets() {
         setLoading(false)
     };
 
-    const handleRate = (e, id, item) => {
+    const handleRate = useCallback((e, id, item) => {
         const rate = e.innerHTML;
         const sameItemIndex = updateBasketData.findIndex(el => el.code === item.C);
         const isActive = e.classList.contains("active");
@@ -44,7 +44,7 @@ function Bets() {
             updateBasketData = updateBasketData.filter(el => el.code !== item.C);
             setBasketData([...updateBasketData]);
         }
-    };
+    }, [updateBasketData, setBasketData]);
 
     const isInBasket = (itemCode, id) => {
         return updateBasketData.some(el => el.code === itemCode && el.id === id);
