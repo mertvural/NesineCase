@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { memo } from "react";
 
 function Basket({ basketData }) {
+    console.log("basket")
     const [small, setSmall] = useState(false);
     let total = 1;
     const basketClass = basketData.length > 0 ? "active" : "";
@@ -38,4 +40,4 @@ function Basket({ basketData }) {
     );
 }
 
-export default Basket;
+export default memo(Basket);
